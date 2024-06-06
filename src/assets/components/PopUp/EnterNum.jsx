@@ -3,7 +3,10 @@ import { VerifyNum } from "./VerifyNum";
 
 export function EnterNum() {
   const [showVerifyNum, setVerifyNum] = useState(false);
-  const handleVerifyClick = () => setVerifyNum(true);
+  const handleVerifyClick = function () {
+    //need to remove enter number popup
+    setVerifyNum(true);
+  };
 
   return (
     <>
@@ -25,9 +28,13 @@ export function EnterNum() {
 
           <input type="number" className="bg-transparent outline-none" />
 
-          <button className="bg-[#92929252] px-4 py-1 font-semibold">
+          <button
+            onClick={handleVerifyClick}
+            className="bg-[#92929252] px-4 py-1 font-semibold"
+          >
             Send
           </button>
+          {showVerifyNum ? <VerifyNum /> : null}
         </div>
       </div>
     </>
