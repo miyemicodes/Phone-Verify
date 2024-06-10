@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { EnterNum } from "./PopUp/EnterNum";
+import { VerifyNum } from './PopUp/VerifyNum';
 
 function App() {
-  const [showEnterNum, setEnternum] = useState(false);
-  const handleClick = () => setEnternum(true);
+  const [openNumModal, setOpenNumModal] = useState(false);
+
+  const [openVerifyNumModal, setOpenVerifyNumModal] = useState(false);
+
+  const handleClick = () => setOpenNumModal(true);
   // const handleToggle = () => setEnternum(false);
 
   return (
@@ -17,10 +21,10 @@ function App() {
           <div className="flex flex-col items-center gap-7">
             <h1 className="text-4xl">Verification Required</h1>
             <p className="text-md">
-              We've detected some abnormalities and we want to keep you and the
-              community safe. Verify your account to continue using our product
+              We&apos;ve detected some abnormalities and we want to keep you and the
+              community safe. Verify your account to continue using our product {/*  */}
               <a className="text-blue-400" href="#">
-                Learn more
+                learn more
               </a>
             </p>
             <button
@@ -33,7 +37,8 @@ function App() {
         </div>
       </div>
 
-      {showEnterNum ? <EnterNum /> : null}
+      {openNumModal ? <EnterNum numModalState={setOpenNumModal} openVerifyNumModalState={setOpenVerifyNumModal}  /> : null}
+      {openVerifyNumModal ? <VerifyNum /> : null}
     </>
   );
 }
