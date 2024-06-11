@@ -6,11 +6,12 @@ export function EnterNum() {
   const handleVerifyClick = function () {
     //need to remove enter number popup
     setVerifyNum(true);
+    // setEnternum(false);
   };
 
   return (
     <>
-      <div className="bg-[#3f3e3e] text-[#eeebeb] flex flex-col items-center justify-center gap-2 absolute top-[26%] left-[35%] right-[30%] w-[450px] h-[45vh] px-3">
+      <div className="bg-[#3f3e3e] text-[#eeebeb] flex flex-col items-center justify-center gap-2 absolute top-[26%] left-[35%] right-[30%] w-[40%] h-[45%] px-3">
         <h2 className="font-bold text-lg">Enter a Phone Number</h2>
         <p className="text-sm">
           You will receive a call with a verification code.

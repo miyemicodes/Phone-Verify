@@ -19,6 +19,7 @@ function App() {
             <p className="text-md">
               We've detected some abnormalities and we want to keep you and the
               community safe. Verify your account to continue using our product
+              .
               <a className="text-blue-400" href="#">
                 Learn more
               </a>
