@@ -8,15 +8,12 @@ function App() {
   const [openVerifyNumModal, setOpenVerifyNumModal] = useState(false);
 
   const handleClick = () => setOpenNumModal(true);
-  // const handleToggle = () => setEnternum(false);
 
   return (
     <>
       <div className=" flex items-center justify-center bg-[#1a1a1a] text-[#7c7878] w-full h-screen relative">
         <div className="flex flex-col items-center justify-center gap-10 w-[500px] h-lvh">
-          {/* <div>
-            <img src="" alt="" />
-          </div> */}
+         
 
           <div className="flex flex-col items-center gap-7">
             <h1 className="text-4xl">Verification Required</h1>
